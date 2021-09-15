@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    align-items: center;
+    position: fixed; /* uvek da bude fiksno gore u uglu */
+    top: 10px;
+   
+}
+#select>select, #input-search {
+    font-size: 18px;
+}
+#select>select {
+margin-right: 10px;
+}
+main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#select>select, #input-search, #sotirajuci>select {
+    font-size: 18px;
+}
+#select>select, #input-search {
+margin-right: 10px;
+}
+.country, .central {
+    margin: 10px 0;
+    padding: 10px 20px 20px 20px;
+    background-color: rgba(204, 204, 204, 0.5);
+    border: 1px solid rgb(0, 0, 0);
+}
+.country {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img {
+    margin-top: 10px;
+    width: 80px;
+}
+/* namerno izostavila relative, jer je onda po defaultu nadredjeni parent cela web strana */
+.central {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.central img {
+    width: 200px;
+}
+
+#pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#pagination button {
+    /* bolja je opcija W/H jer sa paddingom su razl.velicine ako imaju jednocift. ili dvocifr.broj */
+    width: 30px;
+    height: 30px;
+    transition:.5s;
+    cursor: pointer;
+}
+#pagination button:hover {
+    border-radius: 5px;
+    background-color: rgba(100, 149, 237, 0.4);
+}
+#pagination button.active {
+    transform: scale(1.5);
+    border-radius: 5px;
+    background-color: rgb(100, 149, 237);
+}
